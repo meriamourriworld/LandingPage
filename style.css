@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+button:hover{
+    cursor: pointer ;
+}
+
+/*Responsive Menu*/
+.responsive-menu{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    background-color: #222224;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.responsive-menu i{
+    color: #E8B912;
+    font-size: 1.5em;
+    transition: all 0.5s ease;
+}
+
+
+
+.responsive-menu i:hover{
+    color: white;
+    font-size: 1.7em;
+}
+/*Header Style*/
+header{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: #222224;
+    border-radius: 0 0 60% 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+}
+
+header img {
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+header nav{
+    margin-right: 60px;
+}
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0px 10px;
+    }
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: philosopher,sans-serif;
+    font-size: 18px;
+    padding:8px 15px;
+    color: #E8B912;
+    transition: all 2s ease;
+}
+
+
+header ul a:hover{
+    color: #222224;
+    background-color: rgba(232, 186, 18, 0.678);
+    border-top: 1px solid #222224;
+    border-bottom: 1px solid #222224;
+    border-radius: 2px;
+}
+
+/*SECTION 1 >> Product descrioption*/
+.product-description{
+    background-image: url("images/headphones.jpg");
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.description{
+    width: 30%;
+    padding-left: 10%;
+    text-align: left;
+    font-family: philosopher,sans-serif;
+}
+.description h1{
+    font-size: 44px;
+}
+.description p{
+    font-size: 18px;
+}
+.description button{
+    font-family: philosopher,sans-serif;
+    font-size: 20px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.description .check{
+    color: #E8B912;
+    background-color: #222224;
+}
+
+/*SECTION 2 >> Product feature*/
+.product-features{
+    background-color: #222224;
+    font-family: philosopher,sans-serif;
+    padding-bottom: 80px;
+}
+
+.features-title{
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+    line-height: 50px;
+}
+
+.features-wrapper{
+    width: 60%;
+    margin: 50px auto auto auto;
+    color: #E8B912;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.feature{
+    text-align: center;
+    width: 200px;
+    font-size: 14px;
+    opacity: 0;
+    animation: featuresanimation 1.5s ease;
+    animation-fill-mode: forwards;
+}
+
+.feature i{
+    font-size: 22px;
+}
+
+.feature p{
+    color: white;
+    opacity: 0.6;
+}
+
+.buy-features-button{
+    font-weight: bold;
+    font-family: philosopher,sans-serif;
+    background-color: #E8B912;
+    color:#141414;
+    border-radius: 50%;
+    border: none;
+    font-size: 16px;
+    width: 100px;
+    height: 100px;
+    transition: all 2s;
+}
+
+.buy-features-button:hover{
+    background-color: #222224;
+    color: white;
+    border: 1px solid #E8B912;
+    transform: rotatez(360deg);
+}
+
+.bass{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    animation-delay: 1s;
+}
+
+
+.noise{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    animation-delay: 2s;
+}
+
+.buy-features{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.bluetooth{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    animation-delay: 3s;
+}
+
+.battery{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    animation-delay: 4s;
+}
+
+
+
+/*Offers Section*/
+.offers-wrapper{
+    position: relative;
+    font-family: philosopher,sans-serif;
+    text-align: left;
+    background-image: url("images/offers.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #E8B912;
+    color: #222224;
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.offers-wrapper::before{
+    position: absolute;
+    top: -170px;
+    left: 0;
+    content: '';
+    background-color: #E8B912;
+    height: 90%;
+    width:70%;
+    transform: skewY(50deg);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.offers-text{
+    padding-left: 80px;
+    padding-top: 80px;
+    width: 45%;
+}
+.offers-image{
+    width: 100%;
+}
+
+.offers-text p {
+    padding-bottom: 20px;
+}
+
+.offers-text img{
+    background-color: #141414;
+    border-radius: 10px;
+}
+
+.offers-text img:hover{
+    background-color: #222224;
+    border-color: #E8B912;
+    border-radius: 10px;
+}
+
+
+/*Related Products Section*/
+.related-products-wrapper{
+    margin-top: 70px;
+    font-family: philosopher,sans-serif;
+    padding-bottom: 70px;
+
+}
+
+.related-pdt-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.related-pdt-title{
+    text-align: center;
+    color: #222224;
+    line-height: 40px;
+}
+
+
+
+.product{
+    position: relative;
+    width: 20%;
+    height: 300px;
+    padding-bottom: 50px;
+    border: 1px solid #22222470;
+    display: flex;
+    justify-content: center;
+    background-color: #E8B912;
+    transition: all 0.3s ease-in;
+}
+.product:hover{
+    transform: scale(0.9);
+    box-shadow:  0 4px 8px 0 rgba(216, 213, 7, 0.384), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product h3{
+    color: #222224;
+    width: 70%;
+    padding-bottom: 10px;
+}
+
+.product p{
+    color: #222224;
+    opacity: 0.8;
+    padding-bottom: 5px;
+}
+.stars{
+    float: right;
+    font-size: 10px;
+    margin-top: 15px;
+    color: #222224;
+}
+
+.pdt-button{
+    display: inline;
+    width: 49%;
+    height: 40px;
+    border: 1px solid #222224a1;
+    border-radius: 3px;
+    background-color: #E8B912;
+    font-family: philosopher,sans-serif;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.pdt-button:hover{
+    background-color: #222224;
+    color: #E8B912;
+}
+.pdt1{
+    background-image: url("images/pdt1.jpg");
+    background-position-x: center;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pdt-description{
+    position: absolute;
+    top:230px;
+}
+
+
+.pdt2{
+    background-image: url("images/pdt2.jpg");
+    background-position-x: center;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pdt3{
+    background-image: url("images/pdt3.jpg");
+    background-position-x: center;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pdt4{
+    background-image: url("images/pdt4.jpg");
+    background-position-x: center;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/*Cart SEction*/
+.cart-wrapper{
+    height: 100px;
+    background-color: #E8B912;
+    font-family: philosopher,sans-serif;
+    color: #222224;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart-wrapper button{
+    font-family: philosopher,sans-serif;
+    padding: 20px 25px;
+    background-color: #222224;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+/*Footer*/
+footer{
+    font-family: philosopher,sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.582);
+    text-align: center;
+    padding-top: 50px;
+    background-color: #222224;
+    height: 50px;
+}
+
+
+
+
+
+/***********ANIMATIONS************/
+@keyframes featuresanimation{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.4);
+       opacity: 0.5;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*************Responsive Design**************/
+@media(max-width:980px){
+
+    /*Menu*/
+    .responsive-menu{
+        visibility: visible;
+    }
+    header{
+        visibility: hidden;
+    }
+
+    /*Description*/
+    .product-description{
+        height: 400px;
+    }
+    .description{
+        background-color: #22222480;
+        color: white;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        font-family: philosopher,sans-serif;
+        padding-bottom: 40px;
+    }
+    .description h1{
+        font-size: 40px;
+    }
+    .description p{
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    .description button{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /*Offers Section*/
+    .offers-wrapper{
+        background-position: right ;
+        background-size: 50%;
+        height: 300px;
+    }
+    .offers-text{
+        font-size: 0.9em;
+        padding-bottom: 10%;
+        padding-top: 40px;
+    }
+
+
+    /*Related Product Section*/
+    .related-pdt-title{
+        font-size: 0.8em;
+    }
+
+    .product{
+        width: 30%;
+        margin-top: 5%;
+    }
+}
+
+
+
+
+
+@media(max-width:780px){
+    /*Offers*/
+    .offers-image img{
+        width: 45%;
+        margin-bottom: 30%;
+    }
+
+    /*Related Products*/
+    .product{
+        width: 40%;
+    }
+}
+@media(max-width:650px){
+
+    .offers-wrapper{
+        padding-bottom: 15%;
+    }
+
+    /*Related Products*/
+    .product{
+        width: 50%;
+    }
+
+
+}
